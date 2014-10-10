@@ -12,12 +12,12 @@ class NotificationTableSeeder extends Seeder {
         ));
 
         Notification::create(array(
-            'user_id' => 1,
+            'user_id' => 2,
             'notification' => "Op 6/10 zal er een persconferentie van Telenet plaatsvinden in de Creativity Gym."
         ));
 
         Notification::create(array(
-            'user_id' => 2,
+            'user_id' => 3,
             'notification' => "IMD Café nodigt binnenkort opnieuw enkele sprekers uit om te spreken over SKETCH!"
         ));
 

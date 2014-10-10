@@ -9,7 +9,7 @@
 
 	<script>
 	$(document).ready(function(){
-			$.getJSON( "http://localhost:8000/api/v1/notification", function( data ) {
+			$.getJSON( "http://app.weareimd.be/api/v1/notification", function( data ) {
 			  var items = [];
 			  $.each( data.notifications, function( key, val ) {
 			    items.push( "<li id='" + key + "'>" + val.notification + "</li>" );

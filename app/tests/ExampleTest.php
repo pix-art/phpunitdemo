@@ -9,7 +9,11 @@ class ExampleTest extends TestCase {
 	 */
 	public function testBasicExample()
 	{
-		$crawler = $this->client->request('GET', '/');
+		$crawler = $this->client->request('GET', '/api/v1/notification');
+
+		$content = $this->client->getResponse()->getContent();
+
+		$this->assertTrue(is_object(json_decode($content)));
 
 		$this->assertTrue($this->client->getResponse()->isOk());
 	}

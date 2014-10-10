@@ -23,7 +23,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'x.weareimd.be',
+			'database'  => 'appweareimdbe',
 			'username'  => 'root',
 			'password'  => '',
 			'charset'   => 'utf8',
