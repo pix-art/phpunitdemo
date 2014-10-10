@@ -1,22 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Weareimd.be - Notification Application</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-</head>
-<body>
-<div class="container">
+@extends('layouts.master')
 
-<nav class="navbar navbar-inverse">
-    <div class="navbar-header">
-        <a class="navbar-brand" href="{{ URL::to('notifications') }}">Weareimd.be</a>
-    </div>
-    <ul class="nav navbar-nav">
-        <li><a href="{{ URL::to('notifications') }}">View All notifications</a></li>
-        <li><a href="{{ URL::to('notifications/create') }}">Create a notification</a>
-    </ul>
-</nav>
-
+@section('content')
 <h1>All the notifications</h1>
 
 <!-- will be used to show any messages -->
@@ -24,7 +8,7 @@
     <div class="alert alert-info">{{ Session::get('message') }}</div>
 @endif
 
-<table class="table table-striped table-bordered">
+<table class="table table-bordered">
     <thead>
         <tr>
             <td>ID</td>
@@ -35,7 +19,7 @@
     </thead>
     <tbody>
     @foreach($notifications as $key => $value)
-        <tr>
+        <tr class="@if ($value->level == 2) warning @elseif ($value->level == 3) danger @endif">
             <td>{{ $value->id }}</td>
             <td>{{ $value->notification }}</td>
             <td>{{ $value->level }}</td>
@@ -61,6 +45,4 @@
     </tbody>
 </table>
 
-</div>
-</body>
-</html>
+@stop
