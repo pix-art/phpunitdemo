@@ -11,7 +11,7 @@ class NotificationController extends \BaseController {
 	{
 		// get all the nerds
         $notifications = Notification::all();
-
+        $notifications->sortByDesc('level');
         // load the view and pass the notifications
         return View::make('notifications.index')
             ->with('notifications', $notifications);
