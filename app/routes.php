@@ -20,6 +20,8 @@ Route::resource('notifications', 'NotificationController');
 
 Route::group(array('prefix' => 'api/v1'), function()
 {
+	Route::get('notification/level/{level}', 'api\v1\NotificationController@importance');
+	Route::get('notification/user/{user}', 'api\v1\NotificationController@user');
 	Route::resource('notification', 'api\v1\NotificationController');
 });
 
