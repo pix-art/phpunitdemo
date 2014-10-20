@@ -1,0 +1,7 @@
+default:
+  paths:
+    features: app/tests/features
+  extensions:
+    Behat\MinkExtension\Extension:
+      goutte: ~
+      base_url: http://app.weareimd.be/
