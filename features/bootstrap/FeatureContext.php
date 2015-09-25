@@ -18,4 +18,11 @@ class FeatureContext extends MinkContext
         // Initialize your context here
     }
 
+    /**
+     * @Given /^I wait for (\d+) seconds$/
+     */
+    public function iWaitForSeconds($seconds)
+    {
+        $this->getSession()->wait($seconds * 1000);
+    }
 }
