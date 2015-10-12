@@ -6,7 +6,7 @@ default:
                 - FeatureContext
     extensions:
         Behat\MinkExtension:
-            base_url: http://imd.demo.dev:8888/
+            base_url: http://localhost/
             sessions:
                 default:
                     selenium2: ~
